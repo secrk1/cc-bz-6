@@ -1,0 +1,27 @@
+# ---- Java / Maven ----
+target/
+*.class
+*.jar
+!.mvn/wrapper/maven-wrapper.jar
+.idea/
+*.iml
+.vscode/
+.settings/
+.project
+.classpath
+
+# ---- Node / Vite ----
+node_modules/
+dist/
+dist-ssr/
+*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ---- 环境与系统文件 ----
+.env
+.env.*
+!.env.example
+.DS_Store

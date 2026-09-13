@@ -1,0 +1,31 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+spring:
+  application:
+    name: workflow-approval-backend
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/${MYSQL_DB:workflow_approval}?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    username: ${MYSQL_USER:root}
+    password: ${MYSQL_PASSWORD:root123}
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+  global-config:
+    banner: false
+    db-config:
+      id-type: auto
+
+# JWT 配置（生产环境请通过环境变量覆盖默认密钥）
+jwt:
+  secret: ${JWT_SECRET:workflow-approval-default-jwt-secret-key-please-change-in-production-0123456789}
+  # 令牌有效期，默认 24 小时（毫秒）
+  expiration: ${JWT_EXPIRATION:86400000}
+
+logging:
+  level:
+    com.workflow.approval: debug
