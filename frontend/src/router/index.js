@@ -30,6 +30,12 @@ const routes = [
         name: 'UserManage',
         component: () => import('@/views/user/index.vue'),
         meta: { title: '人员管理', icon: 'User', roles: ['ADMIN'] }
+      },
+      {
+        path: 'designer',
+        name: 'ProcessDesigner',
+        component: () => import('@/views/designer/index.vue'),
+        meta: { title: '流程设计器', icon: 'Share', roles: ['ADMIN'] }
       }
     ]
   },

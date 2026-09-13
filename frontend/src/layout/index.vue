@@ -24,6 +24,10 @@
           <el-icon><User /></el-icon>
           <span>人员管理</span>
         </el-menu-item>
+        <el-menu-item v-if="isAdmin" index="/designer">
+          <el-icon><Share /></el-icon>
+          <span>流程设计器</span>
+        </el-menu-item>
       </el-menu>
     </el-aside>
 

@@ -28,7 +28,19 @@ public enum ResultCode {
     DEPT_HAS_CHILDREN(2004, "该部门下存在子部门，不允许删除"),
     DEPT_HAS_USERS(2005, "该部门下仍有用户，不允许删除"),
     DEPT_PARENT_INVALID(2006, "不能将部门挂载到自身或其子部门下"),
-    LEADER_BELONGS_OTHER_DEPT(2007, "该用户已归属其他部门，不能设置为本部门负责人");
+    LEADER_BELONGS_OTHER_DEPT(2007, "该用户已归属其他部门，不能设置为本部门负责人"),
+
+    PROCESS_NOT_FOUND(3001, "流程定义不存在"),
+    PROCESS_NODE_NAME_BLANK(3002, "审批节点名称不能为空"),
+    PROCESS_APPROVER_TYPE_INVALID(3003, "审批人类别不合法"),
+    PROCESS_NODE_APPROVER_REQUIRED(3004, "审批人类别为指定人员时必须选择审批人"),
+    PROCESS_NODE_APPROVER_NOT_FOUND(3005, "指定的审批人不存在"),
+    PROCESS_NODE_TOO_MANY(3006, "审批节点数量超过上限"),
+    PROCESS_GATEWAY_MODE_INVALID(3007, "分支网关模式不合法"),
+    PROCESS_GATEWAY_BRANCHES_INVALID(3008, "条件分支至少需要 2 条分支"),
+    PROCESS_BRANCH_CONDITION_REQUIRED(3009, "互斥网关的分支条件名称不能为空"),
+    PROCESS_NODE_DEPTH_TOO_DEEP(3010, "分支嵌套层级超过上限"),
+    PROCESS_TOPOLOGY_INVALID(3011, "流程拓扑数据不合法");
 
     private final int code;
     private final String message;
